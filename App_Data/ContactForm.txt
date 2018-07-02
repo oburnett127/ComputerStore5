@@ -1,0 +1,9 @@
+﻿Hello,
+
+A user has sent the following comments.
+
+Name:					##Name##
+E-mail address:			##Email##
+Home phone:				##HomePhone##
+Business phone:			##BusinessPhone##
+Comments:				##Comments##

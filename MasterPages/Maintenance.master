@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Maintenance.master.cs" Inherits="MasterPages_Maintenance" %>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="AdminPageWrapper" runat="server">
+            <asp:ContentPlaceHolder ID="StatusArea" runat="server">
+                <asp:SiteMapPath ID="SiteMapPath1" runat="server" CssClass="SiteMapPath"></asp:SiteMapPath>
+            </asp:ContentPlaceHolder>
+
+            <asp:ContentPlaceHolder ID="ButtonPlaceHolder" runat="server"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <asp:ImageButton ID="imagebuttonViewCart" runat="server" CssClass="ViewCartImageButton"
+                    ImageUrl="~/Images/view_cart_image.png" Height="77px" Width="74px" 
+                    AlternateText="View Cart button" 
+                    ToolTip="Click to view items in shopping cart."
+                    PostBackUrl="~/ViewCart.aspx">
+                </asp:ImageButton>
+            </asp:ContentPlaceHolder>
+
+            <div id="AdminLeftPanel" runat="server">
+                <asp:Label ID="Label1" runat="server" Text="Admin Pages Menu" CssClass="AdminMenu" />
+                <ul id="AdminPagesMenu" runat="server" title="Admin Pages Menu">
+                    <li id="AdminHomeListItem" runat="server"><a id="AdminHomeLink" href="~/Maintenance/AdminMenu.aspx" runat="server">Admin Home</a></li>
+                    <li id="ProductEditListItem" runat="server"><a id="ProductEditLink" href="~/Maintenance/ProductEdit.aspx" runat="server">Product Manager</a></li>
+                    <li id="OrderViewListItem" runat="server"><a id="OrderViewLink" href="~/Maintenance/OrderView.aspx" runat="server">Order Manager</a></li>
+                    <li id="CustomerHomeListItem" runat="server"><a id="CustomerHomeLink" href="~/Default.aspx" runat="server">Customer Home Page</a></li>
+                </ul>
+            </div>
+
+            <div id="AdminRightPanel" runat="server">
+                <asp:ContentPlaceHolder ID="cpMainContent" runat="server"></asp:ContentPlaceHolder>
+            </div>
+
+            <div id="LogInBar" runat="server">
+                <asp:LoginView ID="LoginView1" runat="server">
+                    <LoggedInTemplate>
+                        <asp:LoginName ID="LoginName1" runat="server" 
+                            FormatString="Logged in as {0}." />
+                    </LoggedInTemplate>
+                </asp:LoginView>
+                (<asp:LoginStatus ID="LoginStatus1" runat="server" LogoutText="Logged in.  Click here to log out."
+                    LoginText="Not logged in.  Click here to log in." LogoutAction="RedirectToLoginPage" />) &nbsp; 
+            </div> <!-- /div LogInBar -->
+        </div>
+    </form>
+</body>
+</html>

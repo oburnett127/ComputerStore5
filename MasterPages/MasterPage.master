@@ -1,0 +1,104 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPages_MasterPage" %>
+    
+    <html xmlns="http://www.w3.org/1999/xhtml"> <!-- This line cannot be removed. -->
+
+    <head runat="server">
+        <title></title>
+        <asp:ContentPlaceHolder id="head" runat="server">
+        </asp:ContentPlaceHolder>
+        <link href="../App_Themes/Green/Green.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+        <form id="form1" runat="server">
+            <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true">
+                <Scripts>
+                    <asp:ScriptReference Path="~/Scripts/jquery-1.4.1.min.js" />
+                </Scripts>
+            </asp:ScriptManager> <br />
+
+            <div id="PageWrapper">
+                <div id="Header">
+                    <otech:Banner CssClass="Logo" ID="Banner1" runat="server" DisplayDirection="Horizontal"></otech:Banner><br />
+                </div>
+
+                <div id="MenuWrapper">
+                    <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" 
+                        CssClass="MainMenu" DataSourceID="SiteMapDataSource1" 
+                        StaticEnableDefaultPopOutImage="False">
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"
+                                Value="Home" ToolTip="Go to the home page."></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ViewProducts.aspx" Text="View Products" 
+                                Value="View Products" ToolTip="View products for sale."></asp:MenuItem>
+                            <asp:MenuItem Text="My Account">
+                                <asp:MenuItem NavigateUrl="~/MyAccount/ChangePassword.aspx" Text="Change Password" Value="Change Password" />
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/About/Default.aspx" Text="About" Value="About" 
+                                ToolTip="Contact O-TECH or learn more about us.">
+                                <asp:MenuItem NavigateUrl="~/About/AboutUs.aspx" Text="About Us" Value="AboutUs" />
+                                <asp:MenuItem NavigateUrl="~/About/Contact.aspx" Text="Contact" Value="Contact" />
+                                <asp:MenuItem NavigateUrl="~/About/Default.aspx" Text="Default" Value="Default" />
+                            </asp:MenuItem>
+                        </Items>
+                    </asp:Menu> <br />
+                    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="False" />
+                </div>
+
+                <div id="MainContent">
+                    <asp:ContentPlaceHolder ID="StatusArea" runat="server">
+                        <asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
+                    </asp:ContentPlaceHolder>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <!-- Button for accessing admin pages is visible and accessible only to admins by using login view control. -->
+                    <asp:LoginView ID="LoginViewAdminLink" runat="server" >
+                        <RoleGroups>
+                            <asp:RoleGroup Roles="admin">
+                                <ContentTemplate>
+                                    <asp:Button runat="server" CssClass="AdminButton" EnableTheming="false" Text="Admin Menu Page" PostbackUrl="~/Maintenance/AdminMenu.aspx" />
+                                </ContentTemplate>
+                            </asp:RoleGroup>
+                        </RoleGroups>                        
+                    </asp:LoginView>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <!-- Clicking imagebuttonViewCart button takes user to ViewCart.aspx-->
+                    <asp:ContentPlaceHolder ID="ButtonPlaceHolder" runat="server"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:ImageButton ID="imagebuttonViewCart" runat="server" CssClass="ViewCartImageButton"
+                            ImageUrl="~/Images/view_cart_image.png" Height="77px" Width="74px" 
+                            AlternateText="View Cart button" 
+                            ToolTip="Click to view items in shopping cart."
+                            PostBackUrl="~/ViewCart.aspx">
+                        </asp:ImageButton> &nbsp;&nbsp;
+                    </asp:ContentPlaceHolder> &nbsp;&nbsp;&nbsp;
+
+                    <asp:ContentPlaceHolder ID="cpMainContent" runat="server">    
+                    </asp:ContentPlaceHolder>
+                </div> <!-- /div Main Content -->
+
+                <div id="LogInBar" runat="server">
+                    <asp:LoginView ID="LoginView1" runat="server">
+                        <LoggedInTemplate>
+                            <asp:LoginName ID="LoginName1" runat="server" 
+                                FormatString="Logged in as {0}." />
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+                    (<asp:LoginStatus ID="LoginStatus1" runat="server" LogoutText="Logged in.  Click here to log out."
+                     LoginText="Not logged in.  Click here to log in." LogoutAction="RedirectToLoginPage" />) &nbsp; 
+                </div> <!-- /div LogInBar -->
+
+                <div id="Footer" runat="server">
+                    O-TECH Inc. Leading Computer Parts Supplier
+                </div> <!-- /div Footer -->
+            </div> <!-- /div Page Wrapper -->
+        </form>
+    </body>
+</html>

@@ -1,0 +1,577 @@
+﻿*
+{
+  /* 
+    Defines the main font used throughout the entire site 
+  */
+  font-family: Calibri Sans-Serif;
+	margin-left: 0px;
+}
+
+a
+{
+  /*
+    Clears the underline on normal links, and gives them a purple text color.
+  */
+  text-decoration: none;
+  color: #4628C4;
+}
+
+a:hover
+{
+  /*
+    Underlines links when the user hovers the mouse over them.
+  */
+  text-decoration : underline;
+}
+
+a.level1
+{
+	/*Adds some white space to the left of the main menu item text */
+	margin-left: 5px;
+}
+
+a.level2
+{
+	/*Defines the appearence of the sub menu items */
+	background-color: lime;
+	padding-left: 8px;
+}
+
+a.level1:hover, a.level2:hover
+{
+	/* Defines the hover style for the main and sub items */
+	background-color: #555588;
+}
+
+.AdminButton
+{
+	/* Set color of buttons on admin pages to blue and button text color to white. */
+	background-color: Blue;
+	color: White;
+	width: 170px;
+}
+
+.AdminMenu
+{
+	background-color: White;	
+}
+
+#AdminLeftPanel
+{
+	width: 200px; 
+	float: left;
+}
+
+#AdminRightPanel
+{
+	width: 500px; 
+	float: right;
+}
+
+
+#AdminMainContent
+{
+  font-size: 0.8em;
+  width: auto;
+  height: auto;
+  border-left: 1px solid silver;
+  border-right: 2px solid silver;
+  background-color: Aqua;
+  padding: 10px;
+  margin-left:5px;
+}
+
+#AdminPageWrapper
+{
+  width: auto;
+  height: auto;
+  background-color: Teal;
+  margin: auto;
+  padding-top:5px;
+}
+
+.AlternatingRow
+{   /* Used in grid view controls to give every other row a yellow/white color. */
+	background-color: #FFFFCC;	
+}
+
+.MultiLineTextBox
+{
+    width: 180px;   
+}
+
+.MediumTextBox
+{
+	width: 80px;	
+}
+
+.LargerTextBox
+{
+    width: 180px;   
+}
+
+.SmallDropDownList
+{
+	width: 75px;	
+}
+
+.LargeDropDownList
+{
+	width: 200px;	
+}
+
+.SmallTextBox
+{
+	width: 65px;	
+}
+
+.SmallestCell
+{
+	width: 75px;	
+}
+
+.SmallerCell
+{
+	width: 90px;
+}
+
+.MediumCell
+{
+	width: 120px;	
+}
+
+.LargerCell
+{
+	width: 160px;	
+}
+
+.LargestCell
+{
+	width: 210px;	
+}
+
+.MiddleCell
+{
+	padding-left: 10px;	
+	border-left: 1.5px solid black;
+}
+
+.Attention
+{   /* Used on validation summary controls to alert user about fields that they did not
+        fill in or did not fill in correctly before clicking a button. */
+	border: 4px solid red;
+	padding: 10px 0;
+	width: auto;
+	height: auto;
+	margin: auto;
+	display: block;
+	font-family: Calibri;
+	font-size: 24px;
+	color:Red;
+	text-align:left;
+}
+
+body
+{
+  margin: 0;
+  background-color: Orange;
+}
+
+.BottomBorder
+{
+	border-bottom: 1.5px solid black;	
+}
+
+#ButtonPlaceholder
+{   /* Holds image button on master page below menu control. */
+	float:left;
+	width:300px;
+	height:100px;
+	padding-left:800px;	
+}
+
+.DayStyle
+{   /* Specifies color of boxes on calendar control for days of current month. */
+	color: White;
+}
+
+.OtherMonthDayStyle
+{   /* Specifies color of boxes on calendar control for days of the next month
+        or previous month. */
+	Background-color: #CCCCCC;	
+}
+
+.TitleStyle
+{
+	background-color: #0000CC;
+	Font-Size: larger;
+	color: White;
+}
+
+.CenteredText
+{   /* Text appears centered. */
+	text-align: center;
+}
+
+.ControlStyle
+{	/* Gives any control this style is applied to a very light-gray background with a thin solid black border. */
+	background-color: #EEEEEE;
+	border: .75px solid black;	
+}
+
+.ControlTitle
+{
+	font-family: Calibri;
+	font-size: 18px;
+	color: Navy;
+}
+
+.ErrorMessage
+{
+	color: red;
+}
+
+#Footer
+{
+  /*
+    The footer is positioned below all other content (yet still within PageWrapper).
+    clear: both is used to clear the impact of the float properties used for #MainContent and #Sidebar.
+  */
+  width: 1235px;
+  clear: both;
+  height: 37px;
+  background-color:#CCAA00;
+  color: White;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 37px;
+}
+
+.GridViewHeaderStyle
+{
+	color: Navy;
+	font-family: Calibri;
+	font-size: 16px;
+	background-color: White;
+	height: 35px;
+}
+
+#Header
+{
+  /*
+    Gives the header the same width as the PageWrapper.
+  */
+  width: 1200px;
+  height: 123px;
+}
+
+#Header a
+{
+  width: 1200px; 
+  height: 130px; 
+  display: block;  
+}
+
+h1
+{
+	/*
+    Makes h1 elements smaller than their browser default.
+  */
+	font-size: 20px;
+}
+
+h2
+{
+  /* 
+    Gives h2 elements a different background color and size, 
+    and adds a bit of margin at the top to create room between the heading and the preceding element.
+  */
+  font-size : 14px;
+  color : black;
+  margin-top : 10px;
+}
+
+HorizontalPanel
+{
+	height:240px;
+	width:200px;
+	background-color:Silver;
+}
+
+.ImageButton
+{
+	width: 70px;
+	height: 70px;
+	padding: 20px;
+	margin: 20px;
+	border: 1px;
+}
+
+img
+{
+	border: 0;
+}
+
+.Important
+{
+	color: Red;	
+}
+
+.InformationTable
+{
+	background-color: White;
+	border: 1px solid black;	
+}
+
+.InformationTextBoldCalibri
+{
+/* Gives text for instructions a large font-size, Calibri is font-family, make bold. */
+	font-size: 20px;
+	font-family: Calibri;
+	font-weight: bold;
+	text-align: center;
+}
+
+.InformationTextCalibri
+{
+	font-size: 16px;
+	font-family:Calibri;
+}
+
+.InputBox
+{
+	width: 300px;
+}
+
+.InstructionText
+{
+	/* Gives text for instructions a large font-size, Calibri is font-family. */
+	font-size: 16px;
+	font-family: Calibri;	
+}
+
+
+
+.Introduction
+{
+	font-style: italic;
+	color: #3e3e3e;
+}
+
+LargeText
+{
+	font-size: 16px;
+}
+
+.NoticeText
+{
+	font-size: 20px;
+	color: Red;	
+}
+
+.LeftPanel
+{
+	float:left;
+}
+
+#MainContent
+{
+  font-size: 0.8em;
+  width: auto;
+  height: auto;
+  border-left: 1px solid white;
+  border-right: 2px solid white;
+  background-color: #FFFFCC;
+  padding: 10px;
+  margin-left:5px;
+}
+
+.MainMenu
+{
+  width: 1200px;
+  height: 19px;
+  background-color : Yellow;
+  font: calibri 12pts White;
+  text-align:center;
+}
+
+.MainMenu ul li
+{
+  width: 230px;
+  padding: 5px;
+  background-color: #22DC00;
+  font: calibri 12pts White;
+  text-align:center;
+}
+
+#MenuWrapper
+{
+  /*
+    The menu spans the page width, right below the header.
+    At the top and left a few pixels padding is applied to create some room.
+  */
+  width: 1200px;
+  height: 36px;
+  padding-left:10px;
+  padding-right:10px;
+}
+
+#MenuWrapper a
+{
+  color: White;
+}
+
+.MyButton
+{
+  background-color: Red;
+  Color: White;
+  height: inherit;
+  width: inherit;
+  font-family: Calibri;
+  font-size: 16px;
+  border-width: 1px;
+  margin: 1px;
+  outline-style: groove;
+}
+
+.Title
+{
+	font-size: 24px;
+	font-weight: bold;	
+}
+
+#PageWrapper
+{
+  width: auto;
+  height: auto;
+  background-color: Yellow;
+  margin: auto;
+  padding-top:5px;
+}
+
+.PleaseWait
+{
+	height: 32px;
+	width: 500px;
+	background-image: url(Images/PleaseWait.png);
+	background-repeat: no-repeat;
+	padding-left: 40px;
+	line-height: 32px;
+}
+
+.ProductImage
+{
+	max-height: 100px;
+	max-width: 100px;
+}
+
+.QuantityTextbox
+{
+	width: 70px;
+	margin-left: 30px;
+}
+
+.RightPanel
+{
+	float:right;	
+	height:500px;
+}
+
+.SelectedItem
+{
+	background-color: #82FCFF;	
+}
+
+.SiteMapPath
+{
+	padding-bottom:50px;
+}
+
+.StatusLabel
+{
+	/* Set width and font-family for labels appearing in the status area below the menu. */
+	max-width:150px;
+	font-family:Calibri;	
+}
+
+#StatusPanel
+{
+	float:right;
+	height:75px;
+	width:100px;
+	Margin-left:600px;
+}
+
+.TableLabel
+{
+	padding: 20px;	
+}
+
+.TableStyle
+{
+}
+
+ul.level1 
+{
+	/* Defines the appearance of main menu items. */
+	font-size: 14px;
+	font-weight: bold;
+	height: 19px;
+	line-height: 19px;	
+}
+
+ul.level1 .selected
+{
+	/* Defines the appearance of active menu items */
+	background-color: #88AA88;	
+}
+
+.UnderlinedText
+{
+	text-decoration: underline;	
+}
+
+.ValidatorText
+{
+	color: Red;
+	font-family: Calibri;
+	font-size: 14px;	
+}
+
+#ViewCartImageButton
+{
+	margin-left:900px;	
+}
+
+.Watermark
+{
+	position: relative;
+	width: 0;
+	height: 1.25em;
+	vertical-align: top;
+}
+
+.Watermark label
+{
+	position: absolute;
+	left: 0;
+	top: 2px;
+	white-space: nowrap;
+	color: #999;
+	padding-left: 4px;
+	height: 1.25em;
+	vertical-align: middle;
+}
+
+.WelcomeText
+{
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.WideLabel
+{
+	width: auto;	
+}

@@ -1,0 +1,12 @@
+﻿Hello <% UserName %>,
+
+Thank you for signing up for a new account at www.otechcorporatesales.com.
+
+To log in to the site, use the following user name and password:
+
+User name:		<% UserName %>
+Your password:	<% Password %>
+
+We look forward to providing you with the highest quality products and service.
+
+The O-TECH Team

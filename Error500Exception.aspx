@@ -1,0 +1,20 @@
+﻿<%@ Page Title="Server Error" Language="C#" AutoEventWireup="true" CodeFile="Error500Exception.aspx.cs" Inherits="Error500Exception" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Server Error</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <h1>Server Error</h1>
+        <p>The server encountered an error and the page you requested cannot be loaded.</p>
+        <hr />
+        <p>If this error message still appears please contact the administrator at 
+            123-456-7890.</p>
+    </div>
+    </form>
+</body>
+</html>

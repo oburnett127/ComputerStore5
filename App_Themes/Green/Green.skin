@@ -1,0 +1,5 @@
+﻿<asp:Button CssClass="MyButton" runat="server" />
+
+<asp:ImageButton CssClass="ImageButton" runat="server" />
+
+<asp:Menu CssClass="MainMenu" runat="server" />
